@@ -15,6 +15,8 @@
 		A1C2791D27405CEE0096F3BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1C2791B27405CEE0096F3BE /* LaunchScreen.storyboard */; };
 		A1C2792827405CEE0096F3BE /* _0211113_VikashHart_NYCSchoolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C2792727405CEE0096F3BE /* _0211113_VikashHart_NYCSchoolsTests.swift */; };
 		A1C2793327405CEE0096F3BE /* _0211113_VikashHart_NYCSchoolsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C2793227405CEE0096F3BE /* _0211113_VikashHart_NYCSchoolsUITests.swift */; };
+		A1C2794227405E340096F3BE /* NYCSchoolModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C2794127405E340096F3BE /* NYCSchoolModel.swift */; };
+		A1C2794427405E740096F3BE /* SATModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C2794327405E740096F3BE /* SATModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		A1C2792E27405CEE0096F3BE /* 20211113-VikashHart-NYCSchoolsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "20211113-VikashHart-NYCSchoolsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1C2793227405CEE0096F3BE /* _0211113_VikashHart_NYCSchoolsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _0211113_VikashHart_NYCSchoolsUITests.swift; sourceTree = "<group>"; };
 		A1C2793427405CEE0096F3BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1C2794127405E340096F3BE /* NYCSchoolModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYCSchoolModel.swift; sourceTree = "<group>"; };
+		A1C2794327405E740096F3BE /* SATModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SATModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 		A1C2790F27405CEB0096F3BE /* 20211113-VikashHart-NYCSchools */ = {
 			isa = PBXGroup;
 			children = (
+				A1C2794027405E130096F3BE /* APIModels */,
 				A1C2791027405CEB0096F3BE /* AppDelegate.swift */,
 				A1C2791227405CEB0096F3BE /* SceneDelegate.swift */,
 				A1C2791427405CEB0096F3BE /* ViewController.swift */,
@@ -126,6 +131,15 @@
 				A1C2793427405CEE0096F3BE /* Info.plist */,
 			);
 			path = "20211113-VikashHart-NYCSchoolsUITests";
+			sourceTree = "<group>";
+		};
+		A1C2794027405E130096F3BE /* APIModels */ = {
+			isa = PBXGroup;
+			children = (
+				A1C2794127405E340096F3BE /* NYCSchoolModel.swift */,
+				A1C2794327405E740096F3BE /* SATModel.swift */,
+			);
+			path = APIModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +274,9 @@
 			files = (
 				A1C2791527405CEB0096F3BE /* ViewController.swift in Sources */,
 				A1C2791127405CEB0096F3BE /* AppDelegate.swift in Sources */,
+				A1C2794227405E340096F3BE /* NYCSchoolModel.swift in Sources */,
 				A1C2791327405CEB0096F3BE /* SceneDelegate.swift in Sources */,
+				A1C2794427405E740096F3BE /* SATModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
