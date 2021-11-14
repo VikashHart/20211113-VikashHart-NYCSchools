@@ -22,6 +22,7 @@
 		A1C2794B2740610B0096F3BE /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C2794A2740610B0096F3BE /* NetworkClient.swift */; };
 		A1C2794D274061220096F3BE /* EndpointBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C2794C274061220096F3BE /* EndpointBuilder.swift */; };
 		A1C2794F274061870096F3BE /* NYCAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C2794E274061870096F3BE /* NYCAPIClient.swift */; };
+		A1C27953274094240096F3BE /* Caching.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C27952274094240096F3BE /* Caching.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		A1C2794A2740610B0096F3BE /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		A1C2794C274061220096F3BE /* EndpointBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointBuilder.swift; sourceTree = "<group>"; };
 		A1C2794E274061870096F3BE /* NYCAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYCAPIClient.swift; sourceTree = "<group>"; };
+		A1C27952274094240096F3BE /* Caching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Caching.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 		A1C2790F27405CEB0096F3BE /* 20211113-VikashHart-NYCSchools */ = {
 			isa = PBXGroup;
 			children = (
+				A1C27950274093FF0096F3BE /* Components */,
 				A1C2794527405FE30096F3BE /* Networking */,
 				A1C2794027405E130096F3BE /* APIModels */,
 				A1C2791027405CEB0096F3BE /* AppDelegate.swift */,
@@ -163,6 +166,22 @@
 				A1C279462740604C0096F3BE /* NetworkError.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		A1C27950274093FF0096F3BE /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A1C27951274094100096F3BE /* Caching */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		A1C27951274094100096F3BE /* Caching */ = {
+			isa = PBXGroup;
+			children = (
+				A1C27952274094240096F3BE /* Caching.swift */,
+			);
+			path = Caching;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,6 +324,7 @@
 				A1C2794427405E740096F3BE /* SATModel.swift in Sources */,
 				A1C27949274060940096F3BE /* HTTPUrlResponseAPIError.swift in Sources */,
 				A1C2794B2740610B0096F3BE /* NetworkClient.swift in Sources */,
+				A1C27953274094240096F3BE /* Caching.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
