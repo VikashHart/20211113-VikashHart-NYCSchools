@@ -17,6 +17,11 @@
 		A1C2793327405CEE0096F3BE /* _0211113_VikashHart_NYCSchoolsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C2793227405CEE0096F3BE /* _0211113_VikashHart_NYCSchoolsUITests.swift */; };
 		A1C2794227405E340096F3BE /* NYCSchoolModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C2794127405E340096F3BE /* NYCSchoolModel.swift */; };
 		A1C2794427405E740096F3BE /* SATModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C2794327405E740096F3BE /* SATModel.swift */; };
+		A1C279472740604C0096F3BE /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C279462740604C0096F3BE /* NetworkError.swift */; };
+		A1C27949274060940096F3BE /* HTTPUrlResponseAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C27948274060940096F3BE /* HTTPUrlResponseAPIError.swift */; };
+		A1C2794B2740610B0096F3BE /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C2794A2740610B0096F3BE /* NetworkClient.swift */; };
+		A1C2794D274061220096F3BE /* EndpointBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C2794C274061220096F3BE /* EndpointBuilder.swift */; };
+		A1C2794F274061870096F3BE /* NYCAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C2794E274061870096F3BE /* NYCAPIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +58,11 @@
 		A1C2793427405CEE0096F3BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1C2794127405E340096F3BE /* NYCSchoolModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYCSchoolModel.swift; sourceTree = "<group>"; };
 		A1C2794327405E740096F3BE /* SATModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SATModel.swift; sourceTree = "<group>"; };
+		A1C279462740604C0096F3BE /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		A1C27948274060940096F3BE /* HTTPUrlResponseAPIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPUrlResponseAPIError.swift; sourceTree = "<group>"; };
+		A1C2794A2740610B0096F3BE /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		A1C2794C274061220096F3BE /* EndpointBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointBuilder.swift; sourceTree = "<group>"; };
+		A1C2794E274061870096F3BE /* NYCAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYCAPIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +113,7 @@
 		A1C2790F27405CEB0096F3BE /* 20211113-VikashHart-NYCSchools */ = {
 			isa = PBXGroup;
 			children = (
+				A1C2794527405FE30096F3BE /* Networking */,
 				A1C2794027405E130096F3BE /* APIModels */,
 				A1C2791027405CEB0096F3BE /* AppDelegate.swift */,
 				A1C2791227405CEB0096F3BE /* SceneDelegate.swift */,
@@ -140,6 +151,18 @@
 				A1C2794327405E740096F3BE /* SATModel.swift */,
 			);
 			path = APIModels;
+			sourceTree = "<group>";
+		};
+		A1C2794527405FE30096F3BE /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				A1C2794A2740610B0096F3BE /* NetworkClient.swift */,
+				A1C2794C274061220096F3BE /* EndpointBuilder.swift */,
+				A1C2794E274061870096F3BE /* NYCAPIClient.swift */,
+				A1C27948274060940096F3BE /* HTTPUrlResponseAPIError.swift */,
+				A1C279462740604C0096F3BE /* NetworkError.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,8 +298,13 @@
 				A1C2791527405CEB0096F3BE /* ViewController.swift in Sources */,
 				A1C2791127405CEB0096F3BE /* AppDelegate.swift in Sources */,
 				A1C2794227405E340096F3BE /* NYCSchoolModel.swift in Sources */,
+				A1C2794F274061870096F3BE /* NYCAPIClient.swift in Sources */,
+				A1C2794D274061220096F3BE /* EndpointBuilder.swift in Sources */,
+				A1C279472740604C0096F3BE /* NetworkError.swift in Sources */,
 				A1C2791327405CEB0096F3BE /* SceneDelegate.swift in Sources */,
 				A1C2794427405E740096F3BE /* SATModel.swift in Sources */,
+				A1C27949274060940096F3BE /* HTTPUrlResponseAPIError.swift in Sources */,
+				A1C2794B2740610B0096F3BE /* NetworkClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
