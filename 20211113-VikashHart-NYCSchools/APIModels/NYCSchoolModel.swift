@@ -1,53 +1,48 @@
 import Foundation
 
-struct NYCHighSchoolModel: Codable {
-    let results: [SchoolData]
-}
-
 struct SchoolData: Codable {
     let schoolID: String
     let schoolName: String
     let boro: String
     let schoolBio: String
-    let academicOpportunities1: String
-    let academicOpportunities2: String
+    let academicOpportunities1: String?
+    let academicOpportunities2: String?
     let academicOpportunities3: String?
     let academicOpportunities4: String?
     let academicOpportunities5: String?
     let ellPrograms: String
-    let languageClasses: String
+    let languageClasses: String?
     let apCourses: String?
     let diplomaEndorsements: String?
     let neighborhood: String
-    let sharedSpace: String
+    let sharedSpace: String?
     let location: String
     let phoneNumber: String
-    let faxNumber: String
-    let schoolEmail: String
+    let faxNumber: String?
+    let schoolEmail: String?
     let website: String
     let subway: String
     let bus: String
     let finalGrades: String
     let totalStudents: String
-    let startTime: String
-    let endTime: String
-    let additionalInfo: String
-    let extracurricularActivities: String
-    let psalSportsBoys: String
-    let psalSportsGirls: String
-    let psalSportsCoed: String
-    let graduationRate: String
+    let startTime: String?
+    let endTime: String?
+    let additionalInfo: String?
+    let extracurricularActivities: String?
+    let psalSportsBoys: String?
+    let psalSportsGirls: String?
+    let psalSportsCoed: String?
+    let graduationRate: String?
     let attendanceRate: String
-    let collegeCareerRate: String
+    let collegeCareerRate: String?
     let primaryAddress: String
     let city: String
     let zip: String
     let stateCode: String
-    let latitude: String
-    let longitude: String
-    let communityBoard: String
-    let councilDistrict: String
-    let nta: String
+    let latitude: String?
+    let longitude: String?
+    let communityBoard: String?
+    let councilDistrict: String?
 
     //Using coding keys to shorten & simplify keynames & to avoid snakecase
     enum CodingKeys: String, CodingKey {
@@ -93,6 +88,5 @@ struct SchoolData: Codable {
         case longitude
         case communityBoard = "community_board"
         case councilDistrict = "council_district"
-        case nta
     }
 }
