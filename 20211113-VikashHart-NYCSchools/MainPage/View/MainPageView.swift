@@ -13,7 +13,8 @@ class MainPageView: UIView {
         let label = UILabel()
         label.text = "NYC High Schools"
         label.textColor = .black
-        label.font = UIFont(name: "AvenirNext-Bold", size: 20)
+        label.textAlignment = .center
+        label.font = UIFont(name: "AvenirNext-Bold", size: 26)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -63,7 +64,7 @@ class MainPageView: UIView {
 
     // MARK: - Setup Methods
     private func commonInit() {
-        backgroundColor = .white
+        backgroundColor = UIColor(red: 240.0/255.0, green: 240.0/255.0, blue: 240.0/255.0, alpha: 1)
         setupViews()
     }
 
@@ -113,7 +114,7 @@ class MainPageView: UIView {
         NSLayoutConstraint.activate([
             headerTitle.centerYAnchor.constraint(equalTo: headerView.centerYAnchor),
             headerTitle.leadingAnchor.constraint(equalTo: headerView.leadingAnchor, constant: 8),
-            headerTitle.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.6),
+            headerTitle.trailingAnchor.constraint(equalTo: headerView.trailingAnchor, constant: -8),
             headerTitle.heightAnchor.constraint(equalToConstant: 40)
         ])
     }

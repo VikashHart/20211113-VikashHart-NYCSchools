@@ -30,6 +30,13 @@
 		A1C279632741A5320096F3BE /* BoroModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C279622741A5320096F3BE /* BoroModel.swift */; };
 		A1C279652741B5780096F3BE /* BoroCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C279642741B5780096F3BE /* BoroCellViewModel.swift */; };
 		A1C279672741BCEB0096F3BE /* SchoolCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C279662741BCEB0096F3BE /* SchoolCellViewModel.swift */; };
+		A1C2796F2741E7D30096F3BE /* SchoolDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C2796E2741E7D30096F3BE /* SchoolDetailViewController.swift */; };
+		A1C279712741E7F80096F3BE /* SchoolDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C279702741E7F80096F3BE /* SchoolDetailView.swift */; };
+		A1C27977274224C90096F3BE /* PlainTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C27976274224C90096F3BE /* PlainTextCell.swift */; };
+		A1C2797927422FC90096F3BE /* SchoolDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C2797827422FC90096F3BE /* SchoolDetailViewModel.swift */; };
+		A1C2797E274238D50096F3BE /* LoaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C2797D274238D50096F3BE /* LoaderCell.swift */; };
+		A1C279802742605F0096F3BE /* MapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C2797F2742605F0096F3BE /* MapCell.swift */; };
+		A1C2798327427F610096F3BE /* UIView+DropShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C2798227427F610096F3BE /* UIView+DropShadow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +86,13 @@
 		A1C279622741A5320096F3BE /* BoroModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoroModel.swift; sourceTree = "<group>"; };
 		A1C279642741B5780096F3BE /* BoroCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoroCellViewModel.swift; sourceTree = "<group>"; };
 		A1C279662741BCEB0096F3BE /* SchoolCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolCellViewModel.swift; sourceTree = "<group>"; };
+		A1C2796E2741E7D30096F3BE /* SchoolDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolDetailViewController.swift; sourceTree = "<group>"; };
+		A1C279702741E7F80096F3BE /* SchoolDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolDetailView.swift; sourceTree = "<group>"; };
+		A1C27976274224C90096F3BE /* PlainTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainTextCell.swift; sourceTree = "<group>"; };
+		A1C2797827422FC90096F3BE /* SchoolDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolDetailViewModel.swift; sourceTree = "<group>"; };
+		A1C2797D274238D50096F3BE /* LoaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderCell.swift; sourceTree = "<group>"; };
+		A1C2797F2742605F0096F3BE /* MapCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCell.swift; sourceTree = "<group>"; };
+		A1C2798227427F610096F3BE /* UIView+DropShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+DropShadow.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +143,7 @@
 		A1C2790F27405CEB0096F3BE /* 20211113-VikashHart-NYCSchools */ = {
 			isa = PBXGroup;
 			children = (
+				A1C279682741E6830096F3BE /* SchoolPage */,
 				A1C279542740A6C50096F3BE /* MainPage */,
 				A1C27950274093FF0096F3BE /* Components */,
 				A1C2794527405FE30096F3BE /* Networking */,
@@ -185,6 +200,7 @@
 		A1C27950274093FF0096F3BE /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				A1C2798127427EFC0096F3BE /* Extensions */,
 				A1C279612741A51D0096F3BE /* BoroModel */,
 				A1C27951274094100096F3BE /* Caching */,
 			);
@@ -251,6 +267,59 @@
 				A1C279622741A5320096F3BE /* BoroModel.swift */,
 			);
 			path = BoroModel;
+			sourceTree = "<group>";
+		};
+		A1C279682741E6830096F3BE /* SchoolPage */ = {
+			isa = PBXGroup;
+			children = (
+				A1C27975274224A30096F3BE /* Cells */,
+				A1C279692741E6A30096F3BE /* View */,
+				A1C2796B2741E6C70096F3BE /* ViewController */,
+				A1C2796A2741E6B30096F3BE /* ViewModels */,
+			);
+			path = SchoolPage;
+			sourceTree = "<group>";
+		};
+		A1C279692741E6A30096F3BE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A1C279702741E7F80096F3BE /* SchoolDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A1C2796A2741E6B30096F3BE /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A1C2797827422FC90096F3BE /* SchoolDetailViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		A1C2796B2741E6C70096F3BE /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A1C2796E2741E7D30096F3BE /* SchoolDetailViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		A1C27975274224A30096F3BE /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A1C27976274224C90096F3BE /* PlainTextCell.swift */,
+				A1C2797D274238D50096F3BE /* LoaderCell.swift */,
+				A1C2797F2742605F0096F3BE /* MapCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		A1C2798127427EFC0096F3BE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A1C2798227427F610096F3BE /* UIView+DropShadow.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -387,20 +456,27 @@
 				A1C2791127405CEB0096F3BE /* AppDelegate.swift in Sources */,
 				A1C2795A2740A7850096F3BE /* MainPageView.swift in Sources */,
 				A1C2795E2740EF950096F3BE /* SchoolCell.swift in Sources */,
+				A1C2796F2741E7D30096F3BE /* SchoolDetailViewController.swift in Sources */,
 				A1C2794227405E340096F3BE /* NYCSchoolModel.swift in Sources */,
 				A1C2794F274061870096F3BE /* NYCAPIClient.swift in Sources */,
+				A1C2798327427F610096F3BE /* UIView+DropShadow.swift in Sources */,
 				A1C27960274196B30096F3BE /* MainPageVCViewModel.swift in Sources */,
 				A1C2794D274061220096F3BE /* EndpointBuilder.swift in Sources */,
 				A1C279472740604C0096F3BE /* NetworkError.swift in Sources */,
 				A1C2791327405CEB0096F3BE /* SceneDelegate.swift in Sources */,
+				A1C2797E274238D50096F3BE /* LoaderCell.swift in Sources */,
 				A1C2794427405E740096F3BE /* SATModel.swift in Sources */,
 				A1C27949274060940096F3BE /* HTTPUrlResponseAPIError.swift in Sources */,
+				A1C279802742605F0096F3BE /* MapCell.swift in Sources */,
 				A1C2794B2740610B0096F3BE /* NetworkClient.swift in Sources */,
 				A1C279652741B5780096F3BE /* BoroCellViewModel.swift in Sources */,
+				A1C279712741E7F80096F3BE /* SchoolDetailView.swift in Sources */,
 				A1C279672741BCEB0096F3BE /* SchoolCellViewModel.swift in Sources */,
 				A1C279632741A5320096F3BE /* BoroModel.swift in Sources */,
 				A1C2795C2740EF500096F3BE /* BoroCell.swift in Sources */,
+				A1C2797927422FC90096F3BE /* SchoolDetailViewModel.swift in Sources */,
 				A1C27953274094240096F3BE /* Caching.swift in Sources */,
+				A1C27977274224C90096F3BE /* PlainTextCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

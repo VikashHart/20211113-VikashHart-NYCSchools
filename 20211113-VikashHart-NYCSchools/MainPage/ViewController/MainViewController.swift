@@ -21,6 +21,7 @@ class MainViewController: UIViewController {
 
     private func bindViewModel() {
         viewModel.onDataRecieved = { [weak self] in
+            self?.mainView.activitySpinner.stopAnimating()
             self?.mainView.collectionView.reloadData()
         }
     }
@@ -64,11 +65,12 @@ extension MainViewController: UICollectionViewDelegate {
             self.viewModel.setBoro(boro: cell.viewModel.boroCode)
             self.viewModel.setUIMode(mode: .School)
             self.viewModel.getSchools(with: cell.viewModel.boroCode)
+            self.mainView.activitySpinner.startAnimating()
             self.mainView.showBackButton(bool: true)
             self.mainView.collectionView.reloadData()
         case .School:
-            print("todo")
-            //navigate to a schoolDetail page
+            let detailVC = SchoolDetailViewController(school: viewModel.schools[indexPath.row])
+            self.present(detailVC, animated: true, completion: nil)
         }
     }
 
@@ -102,7 +104,6 @@ extension MainViewController: UICollectionViewDataSource {
             { return UICollectionViewCell() }
             let viewModel = self.viewModel.getBoroCellViewModel(indexPath: indexPath)
             cell.setViewModel(viewModel: viewModel)
-            //add dropshadow
             return cell
         case .School:
             guard let cell = mainView.collectionView.dequeueReusableCell(
@@ -111,7 +112,7 @@ extension MainViewController: UICollectionViewDataSource {
             { return UICollectionViewCell() }
             let viewModel = self.viewModel.getSchoolCellViewModel(indexPath: indexPath)
             cell.setViewModel(viewModel: viewModel)
-            //add dropshadow
+            cell.addDropShadow()
             return cell
         }
     }
