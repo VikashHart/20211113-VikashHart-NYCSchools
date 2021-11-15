@@ -43,20 +43,23 @@ class MainPageVCViewModel: MainPageVCViewModeling {
     }
 
     private(set) var selectedBoro: EndpointBuilder.Boro?
-    private let client: DataRetrievable?
+    private let client: SchoolsRetrievable
+    private let cache: DataCaching
     var onDataRecieved: (() -> Void)?
 
     init(cellSpacing: CGFloat = 10,
          numberOfCells: CGFloat = 1,
          uiMode: CollectionViewMode = .Boro,
          boroModel: BoroRetrievable = BoroModel(),
-         client: DataRetrievable = NYCAPIClient()) {
+         client: SchoolsRetrievable = NYCAPIClient(),
+         cache: DataCaching = DataCache.shared) {
         self.cellSpacing = cellSpacing
         self.numberOfCells = numberOfCells
         self.numberOfSpaces = numberOfCells + 1
         self.uiMode = uiMode
         self.boros = boroModel.getBoros()
         self.client = client
+        self.cache = cache
     }
 
     func getBoroCellViewModel(indexPath: IndexPath) -> BoroCellModeling {
@@ -81,17 +84,17 @@ class MainPageVCViewModel: MainPageVCViewModeling {
         //check to see if we already have schools cached for this boro
         //if so then use that data
         //if not then make api call for data
-        let cachedSchools = DataCache.shared.getSchools(for: boro)
+        let cachedSchools = cache.getSchools(for: boro)
         if cachedSchools.count != 0 {
             schools = cachedSchools
         } else {
-            client?.getSchoolsBy(boro: boro, completion: { [weak self] (result) in
+            client.getSchoolsBy(boro: boro, completion: { [weak self] (result) in
                 switch result {
                 case .success(let data):
                     for school in data {
                         self?.schools.append(school)
                     }
-                    DataCache.shared.cacheSchools(schools: data)
+                    self?.cache.cacheSchools(schools: data)
                 case .failure(let error):
                     print(error)
                 }
@@ -102,13 +105,13 @@ class MainPageVCViewModel: MainPageVCViewModeling {
     func getNextSchools(with boro: EndpointBuilder.Boro, offset: Int){
         //make api call for more data
         //then cache new data
-        client?.getNextSchoolsBy(boro: boro, offset: schools.count, completion: { [weak self] (result) in
+        client.getNextSchoolsBy(boro: boro, offset: schools.count, completion: { [weak self] (result) in
             switch result {
             case .success(let data):
                 for school in data {
                     self?.schools.append(school)
                 }
-                DataCache.shared.cacheSchools(schools: data)
+                self?.cache.cacheSchools(schools: data)
             case .failure(let error):
                 print(error)
             }

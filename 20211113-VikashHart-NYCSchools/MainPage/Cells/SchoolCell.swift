@@ -1,12 +1,12 @@
 import UIKit
 
 class SchoolCell: UICollectionViewCell {
-    var viewModel: SchoolCellModeling = SchoolCellViewModel(school: SchoolData(schoolID: "", schoolName: "", boro: "", schoolBio: "", academicOpportunities1: "", academicOpportunities2: "", academicOpportunities3: "", academicOpportunities4: "", academicOpportunities5: "", ellPrograms: "", languageClasses: "", apCourses: "", diplomaEndorsements: "", neighborhood: "", sharedSpace: "", location: "", phoneNumber: "", faxNumber: "", schoolEmail: "", website: "", subway: "", bus: "", finalGrades: "", totalStudents: "", startTime: "", endTime: "", additionalInfo: "", extracurricularActivities: "", psalSportsBoys: "", psalSportsGirls: "", psalSportsCoed: "", graduationRate: "", attendanceRate: "", collegeCareerRate: "", primaryAddress: "", city: "", zip: "", stateCode: "", latitude: "", longitude: "", communityBoard: "", councilDistrict: ""))
+    var viewModel: SchoolCellModeling = SchoolCellViewModel(school: SchoolData(schoolID: "", schoolName: "", boro: "", schoolBio: "", academicOpportunities1: "", academicOpportunities2: "", academicOpportunities3: "", academicOpportunities4: "", academicOpportunities5: "", ellPrograms: "", languageClasses: "", apCourses: "", diplomaEndorsements: "", neighborhood: "", location: "", phoneNumber: "", faxNumber: "", schoolEmail: "", website: "", subway: "", bus: "", finalGrades: "", totalStudents: "", startTime: "", endTime: "", additionalInfo: "", extracurricularActivities: "", psalSportsBoys: "", psalSportsGirls: "", psalSportsCoed: "", graduationRate: "", attendanceRate: "", collegeCareerRate: "", primaryAddress: "", city: "", zip: "", stateCode: "", latitude: "", longitude: ""))
 
     //MARK: - Objects
     lazy var schoolLabel: UILabel = {
         let label = UILabel()
-        label.textColor = .white
+        label.textColor = .black
         label.textAlignment = .left
         label.numberOfLines = 0
         label.adjustsFontSizeToFitWidth = true
@@ -17,7 +17,7 @@ class SchoolCell: UICollectionViewCell {
 
     lazy var neighborhoodLabel: UILabel = {
         let label = UILabel()
-        label.textColor = .white
+        label.textColor = .black
         label.textAlignment = .left
         label.numberOfLines = 0
         label.adjustsFontSizeToFitWidth = true
@@ -31,8 +31,8 @@ class SchoolCell: UICollectionViewCell {
         super.init(frame: frame)
         self.layer.masksToBounds = true
         self.layer.cornerRadius = 10
-        self.layer.borderWidth = 1
-        self.layer.borderColor = UIColor.black.cgColor
+//        self.layer.borderWidth = 1
+//        self.layer.borderColor = UIColor.black.cgColor
         commonInit()
     }
 
@@ -42,7 +42,7 @@ class SchoolCell: UICollectionViewCell {
 
     //MARK: - Set up methods
     private func commonInit() {
-        backgroundColor = UIColor.black
+        backgroundColor = UIColor.white
         setupViews()
     }
 
