@@ -11,8 +11,11 @@ protocol ScoresRetrievable {
     func getSATScores(schoolID: String, completion: @escaping (Result<[SATData], NetworkError>) -> Void)
 }
 
+protocol DataRetrievable: SchoolsRetrievable, ScoresRetrievable {
+}
+
 //protocol conformance to ensure all api calls are available
-class NYCAPIClient: SchoolsRetrievable, ScoresRetrievable {
+class NYCAPIClient: DataRetrievable {
     private let client: DataRetrieving
 
     init(dataRetriever: DataRetrieving = NetworkClient()) {
@@ -46,8 +49,8 @@ class NYCAPIClient: SchoolsRetrievable, ScoresRetrievable {
             switch result {
             case .success(let data):
                 do {
-                    let schoolModel = try JSONDecoder().decode(NYCHighSchoolModel.self, from: data)
-                    completion(.success(schoolModel.results))
+                    let schoolModel = try JSONDecoder().decode([SchoolData].self, from: data)
+                    completion(.success(schoolModel))
                 } catch {
                     completion(.failure(NetworkError.jsonDecoding(error)))
                 }
@@ -68,8 +71,8 @@ class NYCAPIClient: SchoolsRetrievable, ScoresRetrievable {
             switch result {
             case .success(let data):
                 do {
-                    let satModel = try JSONDecoder().decode(SATModel.self, from: data)
-                    completion(.success(satModel.results))
+                    let satModel = try JSONDecoder().decode([SATData].self, from: data)
+                    completion(.success(satModel))
                 } catch {
                     completion(.failure(NetworkError.jsonDecoding(error)))
                 }
